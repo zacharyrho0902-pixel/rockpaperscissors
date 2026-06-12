@@ -25,10 +25,9 @@
      return sign;
     }
 
-    let humanScore = 0;
+function playGame() {
+  let humanScore = 0;
     let computerScore = 0;
-
-
     function playRound(humanChoice, computerChoice) {
         const humanChoiceLower = humanChoice.toLowerCase();
         if (humanChoiceLower === computerChoice) {
@@ -47,9 +46,38 @@
             console.log("You lose!");
         }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
+const round1human = getHumanChoice();
+const round1computer = getComputerChoice();
+playRound(round1human, round1computer);
+
+const round2human = getHumanChoice();
+const round2computer = getComputerChoice();
+playRound(round2human, round2computer);
+
+const round3human = getHumanChoice();
+const round3computer = getComputerChoice();
+playRound(round3human, round3computer);
+
+const round4human = getHumanChoice();
+const round4computer = getComputerChoice();
+playRound(round4human, round4computer);
+
+const round5human = getHumanChoice();
+const round5computer = getComputerChoice();
+playRound(round5human, round5computer);
+
+if (humanScore > computerScore) {
+    console.log("YOU WON THE GAME!!")
+}
+else if (computerScore > humanScore) {
+    console.log("YOU LOSE!!")
+}
+else {
+    console.log("TIE")
+}
+}
+
+playGame()
 
     </script>
 </body>
