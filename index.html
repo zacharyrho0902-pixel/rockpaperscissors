@@ -15,8 +15,8 @@
         return "rock";
           }  else if (randomNumber <= 0.67){
         return "paper";
-           } else {
-            } return "scissors";
+           } else {return "scissors";
+            } 
 
      }
 
@@ -27,6 +27,29 @@
 
     let humanScore = 0;
     let computerScore = 0;
+
+
+    function playRound(humanChoice, computerChoice) {
+        const humanChoiceLower = humanChoice.toLowerCase();
+        if (humanChoiceLower === computerChoice) {
+        console.log("It's a tie!");
+    }
+        else if (
+        (humanChoiceLower === "rock" && computerChoice ==="scissors") ||
+        (humanChoiceLower === "scissors" && computerChoice ==="paper") ||
+        (humanChoiceLower === "paper" && computerChoice ==="rock")
+        ) {
+            humanScore++;
+            console.log("You win!");
+        }
+        else {
+            computerScore++;
+            console.log("You lose!");
+        }
+}
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
 
     </script>
 </body>
